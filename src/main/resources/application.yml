@@ -1,0 +1,11 @@
+server:
+  port: 8894
+spring:
+  freemarker:
+    cache: false
+    charset: UTF-8
+    settings:
+      template_update_delay : 0
+
+##配置文件以及markdown文档路径
+docDir: 'D:\dev\workspace\chz_java_workspace\chz-component-markdown\docs\markdown'

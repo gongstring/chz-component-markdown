@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus name="远程医疗协同平台文档接口V0.1（开发版）">
+    <group name="开发流程">
+        <menu id="overview" name="概述" path="/oauth2/dev/main.md" />
+        <menu id="prepare" name="开发前准备" path="/oauth2/dev/prepare.md" />
+        <menu id="login" name="单点登录流程" path="/oauth2/dev/login.md" />
+    </group>
+    <group name="开发文档">
+        <menu id="hospital" name="医院信息">
+            <menu id="hospitalAll" name="1.全量查询" absolute="false" path="/oauth2/dev/hospital/all.md" />
+            <menu id="hospitalAdd" name="2.新增" path="/oauth2/dev/hospital/add.md" />
+            <menu id="hospitalEdit" name="3.修改" path="/oauth2/dev/hospital/edit.md" />
+            <menu id="hospitalDel" name="4.删除" path="/oauth2/dev/hospital/del.md" />
+            <menu id="hospitalListening" name="5.数据变更监听" path="/oauth2/dev/hospital/listening.md" />
+        </menu>
+        <menu id="org" name="科室信息">
+            <menu id="orgAll" name="1.全量查询" absolute="false" path="/oauth2/dev/org/all.md" />
+            <menu id="orgAdd" name="2.新增" path="/oauth2/dev/org/add.md" />
+            <menu id="orgEdit" name="3.修改" path="/oauth2/dev/org/edit.md" />
+            <menu id="orgDel" name="4.删除" path="/oauth2/dev/org/del.md" />
+            <menu id="orgListening" name="5.数据变更监听" path="/oauth2/dev/org/listening.md" />
+        </menu>
+        <menu id="person" name="医生信息">
+            <menu id="personAll" name="1.全量查询" absolute="false" path="/oauth2/dev/person/all.md" />
+            <menu id="personAdd" name="2.新增" path="/oauth2/dev/person/add.md" />
+            <menu id="personEdit" name="3.修改" path="/oauth2/dev/person/edit.md" />
+            <menu id="personDel" name="4.删除" path="/oauth2/dev/person/del.md" />
+            <menu id="personListening" name="5.数据变更监听" path="/oauth2/dev/person/listening.md" />
+        </menu>
+    </group>
+</menus>
