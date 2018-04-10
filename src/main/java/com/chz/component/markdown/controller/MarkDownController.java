@@ -209,7 +209,7 @@ public class MarkDownController {
         DocumentBean documentBean = readWikis(profile);
         if(documentBean == null || paramComponent.getDocDir() == null || "".equals(paramComponent.getDocDir()))
             return;
-        String imageFile = paramComponent.getDocDir()+"/image/"+fileName;
+        String imageFile = paramComponent.getDocDir()+"/image/"+profile+"/"+fileName;
         File file = new File(imageFile);
         if(!file.exists())
             return;
