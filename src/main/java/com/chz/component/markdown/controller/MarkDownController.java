@@ -196,8 +196,11 @@ public class MarkDownController {
             if(id.equals(menu.getId()))
                 return menu;
 
-            if(menu.getChildren() != null && menu.getChildren().size() > 0)
-                return findMenuByTree(menu.getChildren(),id);
+            if(menu.getChildren() != null && menu.getChildren().size() > 0){
+                MenuBean menuChild = findMenuByTree(menu.getChildren(),id);
+                if(menuChild != null)
+                    return menuChild;
+            }
         }
         return null;
     }
