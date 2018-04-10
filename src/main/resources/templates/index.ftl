@@ -32,6 +32,7 @@
         .group ul.menus li.active,.group ul.menus li.menu:hover{
             background-color: #a7d8ff;
             cursor: pointer;
+            padding-left:5px;
         }
 
     </style>
