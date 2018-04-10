@@ -29,7 +29,7 @@
             line-height: 30px;
         }
 
-        .group ul.menus li.menu:hover{
+        .group ul.menus li.active,.group ul.menus li.menu:hover{
             background-color: #a7d8ff;
             cursor: pointer;
         }
@@ -87,6 +87,9 @@
     });
 
     function changePage(id){
+        $("#linkDiv ul li").removeClass("active");
+        $("#linkDiv ul").find("[id='"+id+"']").addClass("active");
+
         $.get("/markdown/${profile}/"+id,function(result){
             $("#contentDiv").html(result);
         });
