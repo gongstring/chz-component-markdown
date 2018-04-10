@@ -75,15 +75,41 @@
 <script type="text/javascript">
     $().ready(function () {
         $("#linkDiv ul li.menu").bind("click",function(i){
+            location.href="/wiki/${profile}/index.html#"+$(this).attr("id");
             changePage($(this).attr("id"));
         })
-        changePage($("#linkDiv ul li").first().attr("id"));
+
+        var param = getParam(0);
+        if(param == '')
+            changePage($("#linkDiv ul li").first().attr("id"));
+        else
+            changePage(param);
     });
 
     function changePage(id){
         $.get("/markdown/${profile}/"+id,function(result){
             $("#contentDiv").html(result);
         });
+    }
+
+    /**
+     * 获取参数信息
+     * @param index 从0开始编起
+     * @returns {string}
+     */
+    function getParam(index){
+        var str=location.href; //取得整个地址栏
+        var num=str.indexOf("#");
+        if(num <= 0)
+            return '';
+
+        str=str.substr(num+1); //取得所有参数   stringvar.substr(start [, length ]
+        if(str.length > 0){
+            var arr=str.split("/"); //各个参数放到数组里
+            if(arr.length > index)
+                return arr[index];
+        }
+        return "";
     }
 </script>
 </body>
