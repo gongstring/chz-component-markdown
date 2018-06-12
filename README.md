@@ -20,7 +20,7 @@ application.yml文件中docDir属性，是指文档以及配置文件的目录�
 
 服务器运行：
 ```
-    nohup java -jar /opt/server/app_wiki/chz-component-markdown-1.0-SNAPSHOT.jar &
+    nohup java -jar /opt/server/app_wiki/chz-component-markdown-1.1-SNAPSHOT.jar &
     
     
     备注：可以通过在命令中添加docDir参数的方式，直接指定运行路径
