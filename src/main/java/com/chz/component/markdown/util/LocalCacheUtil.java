@@ -5,7 +5,15 @@ import java.util.Map;
 
 public class LocalCacheUtil {
 
-    public static Map<String,Object> cacheMaps = new HashMap<>();
+    public static Map<String,Object> cacheMaps = new ConcurrentHashMap<>();
+
+    private static LocalCacheUtil _instance = new LocalCacheUtil();
+
+    private LocalCacheUtil(){}
+
+    public static LocalCacheUtil getInstance(){
+        return _instance;
+    }
 
     public static Map<String,Object> getAttrs(){
         return cacheMaps;
@@ -25,6 +33,6 @@ public class LocalCacheUtil {
 
     public static void removeAll(){
         cacheMaps = null;
-        cacheMaps = new HashMap<>();
+        cacheMaps = new ConcurrentHashMap<>();
     }
 }

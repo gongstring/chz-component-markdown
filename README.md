@@ -117,6 +117,19 @@ application.yml文件中docDir属性，是指文档以及配置文件的目录�
 
 >   功能演示地址：[http://wiki.cxkh.17vote.com/wiki/dev/index.html](http://wiki.cxkh.17vote.com/wiki/dev/index.html)
 
+##  4、版本说明
+
+>   V1.0
+
+```
+    第一个版本功能，开源上传
+```
+
+>   V1.1
+
+```
+    修改LocalCacheUtil工具类，处理线程不安全等BUG；
+```
 
 
 ##   备注
