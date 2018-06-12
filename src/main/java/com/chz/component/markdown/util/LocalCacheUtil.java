@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class LocalCacheUtil {
 
-    public static Map<String,Object> cacheMaps = new ConcurrentHashMap<>();
+    private static Map<String,Object> cacheMaps = new ConcurrentHashMap<>();
 
     private static LocalCacheUtil _instance = new LocalCacheUtil();
 
