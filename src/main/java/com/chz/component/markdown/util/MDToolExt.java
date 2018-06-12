@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class MDToolExt {
 
-    public static String markdown2Html(File file,String charset) throws IOException{
+    public synchronized static String markdown2Html(File file,String charset) throws IOException{
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), charset))){
             String lineStr = null;
 
@@ -26,7 +26,7 @@ public class MDToolExt {
         }
     }
 
-    public static String markdown2Html(File file) throws IOException{
+    public synchronized static String markdown2Html(File file) throws IOException{
         return markdown2Html(file,"UTF-8");
     }
 
